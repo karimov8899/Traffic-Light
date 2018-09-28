@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina3_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Traffic_Light" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="YI3-7V-PJ0">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="trafficLight" translatesAutoresizingMaskIntoConstraints="NO" id="Ofh-NP-DLw">
+                                <rect key="frame" x="16" y="60" width="288" height="161"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="161" id="whf-nN-8Hp"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2cW-Hy-kCa">
+                                <rect key="frame" x="68" y="304.5" width="183" height="175.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="2cW-Hy-kCa" secondAttribute="height" multiplier="119:114" id="6I7-z0-ELE"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="44"/>
+                                <state key="normal" title="Start" backgroundImage="stopButton">
+                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="startAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rdl-Ly-yWo"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wsg-Te-OaO">
+                                <rect key="frame" x="38" y="253" width="244" height="43.5"/>
+                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="100"/>
+                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <size key="shadowOffset" width="3" height="3"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Ofh-NP-DLw" secondAttribute="trailing" constant="16" id="4pR-Fc-mfd"/>
+                            <constraint firstItem="Wsg-Te-OaO" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="38" id="BOS-1z-3xe"/>
+                            <constraint firstItem="Ofh-NP-DLw" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="Br9-nu-56F"/>
+                            <constraint firstItem="YI3-7V-PJ0" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Grb-R9-DWj"/>
+                            <constraint firstItem="Ofh-NP-DLw" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="40" id="L4H-aa-H3V"/>
+                            <constraint firstAttribute="trailing" secondItem="YI3-7V-PJ0" secondAttribute="trailing" id="Sz0-lw-e9w"/>
+                            <constraint firstAttribute="bottom" secondItem="YI3-7V-PJ0" secondAttribute="bottom" id="ceQ-kt-p22"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Wsg-Te-OaO" secondAttribute="trailing" constant="38" id="i0t-CU-Vno"/>
+                            <constraint firstItem="2cW-Hy-kCa" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="68" id="nky-ZJ-oad"/>
+                            <constraint firstItem="YI3-7V-PJ0" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="pMm-28-iju"/>
+                            <constraint firstItem="2cW-Hy-kCa" firstAttribute="top" secondItem="Wsg-Te-OaO" secondAttribute="bottom" constant="8" id="r6C-IL-NnJ"/>
+                            <constraint firstItem="Wsg-Te-OaO" firstAttribute="top" secondItem="Ofh-NP-DLw" secondAttribute="bottom" constant="32" id="s7g-VJ-Ki7"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="2cW-Hy-kCa" secondAttribute="trailing" constant="69" id="yjf-w4-Wat"/>
+                            <constraint firstItem="2cW-Hy-kCa" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="yqf-yy-BcR"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="scoreLabel" destination="Wsg-Te-OaO" id="H5U-Nc-CZZ"/>
+                        <outlet property="startButton" destination="2cW-Hy-kCa" id="qKW-8q-hNg"/>
+                        <outlet property="trafficImage" destination="Ofh-NP-DLw" id="02H-rT-dYd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="135" y="133.09859154929578"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Background" width="1600" height="900"/>
+        <image name="stopButton" width="1000" height="1000"/>
+        <image name="trafficLight" width="1500" height="600"/>
+    </resources>
+</document>
